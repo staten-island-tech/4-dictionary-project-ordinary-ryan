@@ -23,15 +23,28 @@ sam_shop = [
 for index, seed in enumerate(sam_shop):
     print(index, ":", seed["name"])
 cart = []
-buy = input("Which seed do you want to buy?")
-while buy in sam_shop:
-    cart.append(buy)
-    print(cart)
-    input("ok, the seed has been added to your cart. do you want to buy more? yes or no:")
-   
-if buy == ('no'):
-    cart.append(buy)
-    print(cart)
-    print("Your total is:")
+total = 0
+start = True 
+
+while start:
+    buy = input("Which seed do you want to buy?")
+    for seed in sam_shop:
+        if seed not in sam_shop:
+            print("seed not found")
+            buy = input("please choose another seed")
+            
+        else:
+            cart.append(seed["name"])
+            total = total + seed["price"] 
+            print(cart)
+            buy = input("ok, the seed has been added to your cart. do you want to buy more? yes or no:")
+            if buy == 'yes':
+                start = True
+            else:
+                start = False
+
+
+print(cart)
+print("Your total is:", total)
 
 
