@@ -56,14 +56,16 @@ while start:
     for seed in sam_shop:
         if seed["name"] == buy:
             cart.append(seed["name"])
-            total = total + seed["price"] 
+            total += seed["price"] 
             print(cart)
             print("ok, the seed has been added to your cart.")
             break
             
         elif seed["name"] != buy:
             print("seed not found")
-        
+            
+            
+
     cont = input("do you want to buy more? yes or no:")
     if cont == 'no':
         start = False
