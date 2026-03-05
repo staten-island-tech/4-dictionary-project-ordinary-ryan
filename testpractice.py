@@ -1,14 +1,13 @@
 
 
-
-""" def occupied(x,y,t):
+""" 
+def occupied(x,y,t):
     found= 0
     for i in range(x):
         if y[i] == "c" and t[i] == "c":
             found += 1
     print(found)
-occupied (5, "c.ccc", "c.c.c")
- """
+occupied (5, "c.ccc", "c.c.c") """
 
 """ def lang(sent):
         s = 0
@@ -72,7 +71,7 @@ lang("PROHODNIHODNIK") """
             n += 1
         elif i == "I":
             e += 1 """
-def magnus(word):
+""" def magnus(word):
     count = 0
     state = 0
     for char in word:
@@ -87,3 +86,25 @@ def magnus(word):
             count += 1
     print(count)
 magnus("HONI")
+ """
+""" def key(x,y,z):
+    right = 0
+    for i in range(x):
+        if y[i] == z[i]:
+            right += 1
+    print(right)
+key(3, "ABC", "ABA")   """
+
+def key(x,y,z):
+    right = 0
+    for i in range(x):
+        if y[i] == "A" and z[i] == "A":
+            right += 1
+        elif y[i] == "B" and z[i] == "B":
+            right += 1
+        elif y[i] == "C" and z[i] == "C":
+            right += 1
+        else:
+            right += 0
+    print(right)
+key(3,"ABC", "AAA")
