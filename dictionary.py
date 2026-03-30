@@ -63,7 +63,7 @@ while start:
             
         elif seed["name"] != buy:
             print("seed not found")
-            
+            break
             
 
     cont = input("do you want to buy more? yes or no:")
