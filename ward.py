@@ -35,13 +35,15 @@ wards = {
     "Oncology":    ["Ivy", "Bob"]
 }
 
-def ward(department):
-    staff = {}
-    for dep, ppl in wards.items():
-        print(ppl, dep)
-    
-    
-"""   for ppl in department:
-            if ppl['name'] in dep:
-                staff[ppl['name']]['job'] += ppl['name']
-            print(staff) """
+staff = {}
+for dept, docs in wards.items():
+    for doc in docs:
+        if doc not in staff:
+            staff[doc] = [dept]
+        else:
+            staff[doc].append(dept)
+
+print(staff['Bob'])
+
+
+
