@@ -21,8 +21,6 @@ def recipt(Food):
                 'price': sushi['price'],
                 'qty'  : 1
             }  
-    print(the_recipt)
-
     for sushi, value in the_recipt.items():
         price = value['price']*value['qty']
         print(sushi,value['qty'], price)
